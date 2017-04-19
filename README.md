@@ -1,7 +1,8 @@
 # harpo
 My domestic bot
 
-This projec is just for personal usager. However it is possible that someone takes some idea from it to build his own.
+This projec is just for personal usage. 
+However it is possible that someone takes some idea from it to build his own.
 
 ## Requirements and Installation
 
