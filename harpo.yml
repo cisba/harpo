@@ -1,0 +1,31 @@
+
+bot:
+    name: my_name
+    username: "@my_name_bot"
+    token: "the_secret_token"
+
+acl: 
+    - 00000000 # put here your telegram id number to have access to commands
+
+logfile: harpo.log
+loglevel: info
+
+btc:
+    exec:
+        - '/home/btc/bin/bitcoin-cli' 
+    cmds:
+        - getblockcount
+        - getinfo
+        - getblockchaininfo
+        - getconnectioncount
+        - getpeerinfo
+        - getmempoolinfo
+        - getnettotals
+        - getnetworkhashps
+        - getnetworkinfo
+        - estimatefee
+btc_stat: /path_to_a_file_with_statistics
+
+sincro_log: /path_to_a_file_log
+
+ydax_tmpdir: /path_to_a_temporary_directory
