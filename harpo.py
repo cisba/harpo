@@ -84,15 +84,15 @@ def btc(bot,update,args):
     return 
 
 def btc_cmd(args):
-    logging.debug("executing bitcoin-cli " + repr(args))
+    logging.info("executing: " + " ".join(cfg['btc']['exec'] + args))
     try:
-        out = subprocess.check_output(cfg['btc']['exec'] + args)
+        outs = subprocess.check_output(cfg['btc']['exec'] + args)
     except subprocess.CalledProcessError as cmd_error:
         text = "bitcoin-cli error: " + str(cmd_error.returncode) \
                             + " " + str(cmd_error.output)
         logging.error(text)
     else:
-        text = out.decode("utf-8")
+        text = outs.decode("utf-8") 
     return text
 
 def btc_stat(args):
